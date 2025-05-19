@@ -4,556 +4,6 @@ Learn About Computer's From Keelan
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn About Computers From Keelan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        nav {
-            background: #444;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p, ul {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        code {
-            background: #eee;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-family: monospace;
-        }
-        .order-form, .orders {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-        }
-        @media (max-width: 600px) {
-            main {
-                padding: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Learn About Computers From Keelan</h1>
-        <p>Beginner-friendly information about computers, types, and programming!</p>
-    </header>
-    
-    <nav>
-        <a href="#whatis">What is a Computer?</a>
-        <a href="#types">Types of Computers</a>
-        <a href="#programming">Intro to Programming</a>
-        <a href="#orders">Order Tracker</a>
-    </nav>
-
-    <main>
-        <section id="whatis">
-            <h2>What is a Computer?</h2>
-            <p>A computer processes information, performs calculations, and stores data. It follows instructions called programs to complete tasks efficiently.</p>
-            <h3>Basic Components</h3>
-            <ul>
-                <li><strong>Hardware:</strong> Physical parts like the keyboard, monitor, processor.</li>
-                <li><strong>Software:</strong> Programs such as web browsers, games, and applications.</li>
-            </ul>
-        </section>
-
-        <section id="types">
-            <h2>Types of Computers</h2>
-            <ul>
-                <li><strong>Desktop:</strong> Powerful machines used at home and offices.</li>
-                <li><strong>Laptop:</strong> Portable and battery-powered.</li>
-                <li><strong>Tablet:</strong> Touchscreen device for entertainment and work.</li>
-                <li><strong>Smartphone:</strong> Mini-computers for communication and apps.</li>
-                <li><strong>Supercomputer:</strong> Used for high-level research and calculations.</li>
-            </ul>
-        </section>
-
-        <section id="programming">
-            <h2>Introduction to Programming</h2>
-            <p>Programming helps computers follow instructions in different languages.</p>
-            <h3>Popular Languages</h3>
-            <ul>
-                <li><strong>Python:</strong> Simple and beginner-friendly.</li>
-                <li><strong>JavaScript:</strong> Great for interactive websites.</li>
-                <li><strong>Java:</strong> Used for software development.</li>
-                <li><strong>C++:</strong> Often used in gaming and high-performance applications.</li>
-            </ul>
-            <h3>Sample Code</h3>
-            <code>print("Hello, world!")</code>
-            <p>This displays: <strong>Hello, world!</strong></p>
-        </section>
-
-        <section id="orders" class="order-form">
-            <h2>Order Tracker</h2>
-            <form id="orderForm">
-                <label for="orderInput">Order Name or Details:</label>
-                <input type="text" id="orderInput" required>
-                <button type="submit">Add Order</button>
-            </form>
-            <h2>Current Orders</h2>
-            <ul id="ordersList"></ul>
-            <p id="orderCount"></p>
-        </section>
-    </main>
-
-    <script>
-        const orderForm = document.getElementById('orderForm');
-        const orderInput = document.getElementById('orderInput');
-        const ordersList = document.getElementById('ordersList');
-        const orderCount = document.getElementById('orderCount');
-        let orders = [];
-
-        function updateOrdersDisplay() {
-            ordersList.innerHTML = '';
-            orders.forEach((order, index) => {
-                const li = document.createElement('li');
-                li.innerHTML = order + 
-                    ` <button onclick="removeOrder(${index})">Remove</button>`;
-                ordersList.appendChild(li);
-            });
-            orderCount.textContent = 'Total Orders: ' + orders.length;
-        }
-
-        orderForm.onsubmit = function(e) {
-            e.preventDefault();
-            const orderText = orderInput.value.trim();
-            if (orderText) {
-                orders.push(orderText);
-                orderInput.value = '';
-                updateOrdersDisplay();
-            }
-        };
-
-        window.removeOrder = function(index) {
-            orders.splice(index, 1);
-            updateOrdersDisplay();
-        };
-
-        updateOrdersDisplay();
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn About Computers From Keelan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        nav {
-            background: #444;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p, ul {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        code {
-            background: #eee;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-family: monospace;
-        }
-        .order-form, .orders {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-        }
-        @media (max-width: 600px) {
-            main {
-                padding: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Learn About Computers From Keelan</h1>
-        <p>Beginner-friendly information about computers, types, and programming!</p>
-    </header>
-    
-    <nav>
-        <a href="#whatis">What is a Computer?</a>
-        <a href="#types">Types of Computers</a>
-        <a href="#programming">Intro to Programming</a>
-        <a href="#howtouse">How to Use Computers</a>
-        <a href="#orders">Order Tracker</a>
-    </nav>
-
-    <main>
-        <section id="whatis">
-            <h2>What is a Computer?</h2>
-            <p>A computer processes information, performs calculations, and stores data. It follows instructions called programs to complete tasks efficiently.</p>
-            <h3>Basic Components</h3>
-            <ul>
-                <li><strong>Hardware:</strong> Physical parts like the keyboard, monitor, processor.</li>
-                <li><strong>Software:</strong> Programs such as web browsers, games, and applications.</li>
-            </ul>
-        </section>
-
-        <section id="types">
-            <h2>Types of Computers</h2>
-            <ul>
-                <li><strong>Desktop:</strong> Powerful machines used at home and offices.</li>
-                <li><strong>Laptop:</strong> Portable and battery-powered.</li>
-                <li><strong>Tablet:</strong> Touchscreen device for entertainment and work.</li>
-                <li><strong>Smartphone:</strong> Mini-computers for communication and apps.</li>
-                <li><strong>Supercomputer:</strong> Used for high-level research and calculations.</li>
-            </ul>
-        </section>
-
-        <section id="programming">
-            <h2>Introduction to Programming</h2>
-            <p>Programming helps computers follow instructions in different languages.</p>
-            <h3>Popular Languages</h3>
-            <ul>
-                <li><strong>Python:</strong> Simple and beginner-friendly.</li>
-                <li><strong>JavaScript:</strong> Great for interactive websites.</li>
-                <li><strong>Java:</strong> Used for software development.</li>
-                <li><strong>C++:</strong> Often used in gaming and high-performance applications.</li>
-            </ul>
-            <h3>Sample Code</h3>
-            <code>print("Hello, world!")</code>
-            <p>This displays: <strong>Hello, world!</strong></p>
-        </section>
-
-        <section id="howtouse">
-            <h2>How to Use a Computer</h2>
-            <p>Here are some basic steps to help beginners navigate a computer:</p>
-            <ul>
-                <li><strong>Powering On:</strong> Press the power button and wait for the computer to boot.</li>
-                <li><strong>Using a Mouse & Keyboard:</strong> Click icons to open programs; type in text fields using the keyboard.</li>
-                <li><strong>Opening Programs:</strong> Click the Start menu (Windows) or Finder (Mac) to launch apps.</li>
-                <li><strong>Internet Browsing:</strong> Open a web browser (Chrome, Edge, Safari) and enter a website address.</li>
-                <li><strong>Saving Files:</strong> Click "Save As" in programs to store documents.</li>
-                <li><strong>Shutting Down:</strong> Close all applications and click "Shut Down" to turn off the computer.</li>
-            </ul>
-        </section>
-
-        <section id="orders" class="order-form">
-            <h2>Order Tracker</h2>
-            <form id="orderForm">
-                <label for="orderInput">Order Name or Details:</label>
-                <input type="text" id="orderInput" required>
-                <button type="submit">Add Order</button>
-            </form>
-            <h2>Current Orders</h2>
-            <ul id="ordersList"></ul>
-            <p id="orderCount"></p>
-        </section>
-    </main>
-
-    <script>
-        const orderForm = document.getElementById('orderForm');
-        const orderInput = document.getElementById('orderInput');
-        const ordersList = document.getElementById('ordersList');
-        const orderCount = document.getElementById('orderCount');
-        let orders = [];
-
-        function updateOrdersDisplay() {
-            ordersList.innerHTML = '';
-            orders.forEach((order, index) => {
-                const li = document.createElement('li');
-                li.innerHTML = order + 
-                    ` <button onclick="removeOrder(${index})">Remove</button>`;
-                ordersList.appendChild(li);
-            });
-            orderCount.textContent = 'Total Orders: ' + orders.length;
-        }
-
-        orderForm.onsubmit = function(e) {
-            e.preventDefault();
-            const orderText = orderInput.value.trim();
-            if (orderText) {
-                orders.push(orderText);
-                orderInput.value = '';
-                updateOrdersDisplay();
-            }
-        };
-
-        window.removeOrder = function(index) {
-            orders.splice(index, 1);
-            updateOrdersDisplay();
-        };
-
-        updateOrdersDisplay();
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn About Computers From Keelan</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-        nav {
-            background: #444;
-            text-align: center;
-            padding: 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p, ul {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        code {
-            background: #eee;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-family: monospace;
-        }
-        .order-form, .orders {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 8px;
-        }
-        @media (max-width: 600px) {
-            main {
-                padding: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Learn About Computers From Keelan</h1>
-        <p>Beginner-friendly information about computers, types, and programming!</p>
-    </header>
-    
-    <nav>
-        <a href="#whatis">What is a Computer?</a>
-        <a href="#types">Types of Computers</a>
-        <a href="#programming">Intro to Programming</a>
-        <a href="#howtouse">How to Use Computers</a>
-        <a href="#login">How to Log In & Remember Credentials</a>
-        <a href="#speedup">Make Your Computer Faster</a>
-        <a href="#orders">Order Tracker</a>
-    </nav>
-
-    <main>
-        <section id="whatis">
-            <h2>What is a Computer?</h2>
-            <p>A computer processes information, performs calculations, and stores data. It follows instructions called programs to complete tasks efficiently.</p>
-        </section>
-
-        <section id="types">
-            <h2>Types of Computers</h2>
-            <ul>
-                <li><strong>Desktop:</strong> Powerful machines used at home and offices.</li>
-                <li><strong>Laptop:</strong> Portable and battery-powered.</li>
-                <li><strong>Tablet:</strong> Touchscreen device for entertainment and work.</li>
-                <li><strong>Smartphone:</strong> Mini-computers for communication and apps.</li>
-                <li><strong>Supercomputer:</strong> Used for high-level research and calculations.</li>
-            </ul>
-        </section>
-
-        <section id="howtouse">
-            <h2>How to Use a Computer</h2>
-            <ul>
-                <li><strong>Powering On:</strong> Press the power button and wait for startup.</li>
-                <li><strong>Using a Mouse & Keyboard:</strong> Click icons to open programs; type using the keyboard.</li>
-                <li><strong>Opening Programs:</strong> Click the Start menu (Windows) or Finder (Mac).</li>
-                <li><strong>Internet Browsing:</strong> Use Chrome, Edge, or Safari and enter a website address.</li>
-                <li><strong>Saving Files:</strong> Click "Save As" in programs to store documents.</li>
-                <li><strong>Shutting Down:</strong> Close all applications and select "Shut Down."</li>
-            </ul>
-        </section>
-
-        <section id="login">
-            <h2>How to Log In & Remember Credentials</h2>
-            <ul>
-                <li><strong>Creating a Secure Password:</strong> Use a mix of letters, numbers, and symbols.</li>
-                <li><strong>Saving Passwords:</strong> Use a password manager or browser autofill securely.</li>
-                <li><strong>Logging In:</strong> Enter your username and password correctly.</li>
-                <li><strong>2-Factor Authentication:</strong> Add extra security by verifying with a mobile device.</li>
-                <li><strong>Storing Credentials Safely:</strong> Never share or store passwords in unsafe locations.</li>
-            </ul>
-        </section>
-
-        <section id="speedup">
-            <h2>Make Your Computer Faster</h2>
-            <h3>What You SHOULD Do</h3>
-            <ul>
-                <li><strong>Clear Temporary Files:</strong> Use system cleanup tools.</li>
-                <li><strong>Uninstall Unused Programs:</strong> Free up storage space.</li>
-                <li><strong>Upgrade RAM:</strong> More memory helps with performance.</li>
-                <li><strong>Use an SSD:</strong> Faster hard drives improve speed.</li>
-                <li><strong>Update Your Software:</strong> Keep the system optimized.</li>
-            </ul>
-            <h3>What You Should AVOID</h3>
-            <ul>
-                <li><strong>Avoid Too Many Startup Programs:</strong> Slows down boot time.</li>
-                <li><strong>Don't Install Unknown Software:</strong> Can contain malware.</li>
-                <li><strong>Don't Use Registry Cleaners Excessively:</strong> Some may harm performance.</li>
-                <li><strong>Avoid Running Too Many Apps:</strong> Consumes RAM and CPU power.</li>
-                <li><strong>Don't Ignore Hardware Limitations:</strong> Some older computers may need upgrades.</li>
-            </ul>
-        </section>
-
-        <section id="orders">
-            <h2>Order Tracker</h2>
-            <form id="orderForm">
-                <label for="orderInput">Order Name or Details:</label>
-                <input type="text" id="orderInput" required>
-                <button type="submit">Add Order</button>
-            </form>
-            <h2>Current Orders</h2>
-            <ul id="ordersList"></ul>
-            <p id="orderCount"></p>
-        </section>
-    </main>
-
-    <script>
-        const orderForm = document.getElementById('orderForm');
-        const orderInput = document.getElementById('orderInput');
-        const ordersList = document.getElementById('ordersList');
-        const orderCount = document.getElementById('orderCount');
-        let orders = [];
-
-        function updateOrdersDisplay() {
-            ordersList.innerHTML = '';
-            orders.forEach((order, index) => {
-                const li = document.createElement('li');
-                li.innerHTML = order + 
-                    ` <button onclick="removeOrder(${index})">Remove</button>`;
-                ordersList.appendChild(li);
-            });
-            orderCount.textContent = 'Total Orders: ' + orders.length;
-        }
-
-        orderForm.onsubmit = function(e) {
-            e.preventDefault();
-            const orderText = orderInput.value.trim();
-            if (orderText) {
-                orders.push(orderText);
-                orderInput.value = '';
-                updateOrdersDisplay();
-            }
-        };
-
-        window.removeOrder = function(index) {
-            orders.splice(index, 1);
-            updateOrdersDisplay();
-        };
-
-        updateOrdersDisplay();
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn About Computers & Order System</title>
     <style>
         body {
@@ -600,13 +50,7 @@ Learn About Computer's From Keelan
         ul {
             margin-left: 20px;
         }
-        code {
-            background: #eee;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-family: monospace;
-        }
-        .order-section, .payment-section {
+        .section {
             margin-top: 20px;
             padding: 15px;
             background: #f9f9f9;
@@ -622,30 +66,77 @@ Learn About Computer's From Keelan
 <body>
     <header>
         <h1>Learn About Computers & Order System</h1>
-        <p>Beginner-friendly information about computers, ordering, and payments!</p>
+        <p>Everything you need to know about computers, ordering, payments, and optimization!</p>
     </header>
     
     <nav>
+        <a href="#whatis">What is a Computer?</a>
+        <a href="#programming">Intro to Programming</a>
+        <a href="#howtouse">How to Use a Computer</a>
+        <a href="#login">Login & Security</a>
+        <a href="#speedup">Make Your Computer Faster</a>
         <a href="#howorderswork">How Orders Work</a>
         <a href="#orders">Order Management</a>
         <a href="#payment">Make a Payment</a>
     </nav>
 
     <main>
-        <section id="howorderswork">
-            <h2>How Orders Work</h2>
-            <p>Ordering a product follows these basic steps:</p>
+        <section id="whatis" class="section">
+            <h2>What is a Computer?</h2>
+            <p>A computer processes information, performs calculations, and stores data. It follows instructions called programs to complete tasks efficiently.</p>
+        </section>
+
+        <section id="programming" class="section">
+            <h2>Introduction to Programming</h2>
+            <p>Programming allows computers to follow instructions using various languages.</p>
+            <h3>Popular Languages:</h3>
             <ul>
-                <li>Select a product and add it to your order list.</li>
-                <li>Confirm the order details (quantity, price, etc.).</li>
-                <li>Make a payment using a secure checkout system.</li>
-                <li>Receive order confirmation and delivery updates.</li>
+                <li><strong>Python:</strong> Beginner-friendly and widely used.</li>
+                <li><strong>JavaScript:</strong> Helps create interactive websites.</li>
+                <li><strong>Java:</strong> Used for software and app development.</li>
             </ul>
         </section>
 
-        <section id="orders" class="order-section">
+        <section id="howtouse" class="section">
+            <h2>How to Use a Computer</h2>
+            <ul>
+                <li>Press the power button to start up.</li>
+                <li>Use the mouse and keyboard to interact with programs.</li>
+                <li>Save and manage files using system tools.</li>
+                <li>Shut down the computer properly after use.</li>
+            </ul>
+        </section>
+
+        <section id="login" class="section">
+            <h2>Login & Security</h2>
+            <ul>
+                <li>Create strong passwords with letters, numbers, and symbols.</li>
+                <li>Store passwords safely using a manager or encryption.</li>
+                <li>Enable 2-factor authentication for extra security.</li>
+            </ul>
+        </section>
+
+        <section id="speedup" class="section">
+            <h2>Make Your Computer Faster</h2>
+            <h3>What You SHOULD Do:</h3>
+            <ul>
+                <li>Clear temporary files and unnecessary programs.</li>
+                <li>Upgrade RAM and use an SSD for faster performance.</li>
+            </ul>
+            <h3>What You Should AVOID:</h3>
+            <ul>
+                <li>Don't install unnecessary software that slows the system down.</li>
+                <li>Avoid running too many programs at once.</li>
+            </ul>
+        </section>
+
+        <section id="howorderswork" class="section">
+            <h2>How Orders Work</h2>
+            <p>Ordering involves selecting a product, confirming details, making a payment, and receiving the delivery.</p>
+        </section>
+
+        <section id="orders" class="section">
             <h2>Order Management</h2>
-            <p>Add and remove orders dynamically below.</p>
             <form id="orderForm">
                 <label for="orderInput">Order Name or Details:</label>
                 <input type="text" id="orderInput" required>
@@ -656,7 +147,7 @@ Learn About Computer's From Keelan
             <p id="orderCount"></p>
         </section>
 
-        <section id="payment" class="payment-section">
+        <section id="payment" class="section">
             <h2>Make a Payment</h2>
             <form id="paymentForm">
                 <label for="cardNumber">Card Number:</label>
@@ -673,4 +164,42 @@ Learn About Computer's From Keelan
     <script>
         const orderForm = document.getElementById('orderForm');
         const orderInput = document.getElementById('orderInput');
-        const ordersList
+        const ordersList = document.getElementById('ordersList');
+        const orderCount = document.getElementById('orderCount');
+        let orders = [];
+
+        function updateOrdersDisplay() {
+            ordersList.innerHTML = '';
+            orders.forEach((order, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = order + ` <span class="order-btn" onclick="removeOrder(${index})">[Remove]</span>`;
+                ordersList.appendChild(li);
+            });
+            orderCount.textContent = 'Total Orders: ' + orders.length;
+        }
+
+        orderForm.onsubmit = function(e) {
+            e.preventDefault();
+            const orderText = orderInput.value.trim();
+            if (orderText) {
+                orders.push(orderText);
+                orderInput.value = '';
+                updateOrdersDisplay();
+            }
+        };
+
+        window.removeOrder = function(index) {
+            orders.splice(index, 1);
+            updateOrdersDisplay();
+        };
+
+        updateOrdersDisplay();
+
+        document.getElementById('paymentForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert("Payment submitted successfully!");
+        };
+    </script>
+</body>
+</html>
+
