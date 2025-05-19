@@ -549,4 +549,128 @@ Learn About Computer's From Keelan
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Computers & Order System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background: #444;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p, ul {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        code {
+            background: #eee;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .order-section, .payment-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .order-btn {
+            margin-left: 10px;
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn About Computers & Order System</h1>
+        <p>Beginner-friendly information about computers, ordering, and payments!</p>
+    </header>
+    
+    <nav>
+        <a href="#howorderswork">How Orders Work</a>
+        <a href="#orders">Order Management</a>
+        <a href="#payment">Make a Payment</a>
+    </nav>
 
+    <main>
+        <section id="howorderswork">
+            <h2>How Orders Work</h2>
+            <p>Ordering a product follows these basic steps:</p>
+            <ul>
+                <li>Select a product and add it to your order list.</li>
+                <li>Confirm the order details (quantity, price, etc.).</li>
+                <li>Make a payment using a secure checkout system.</li>
+                <li>Receive order confirmation and delivery updates.</li>
+            </ul>
+        </section>
+
+        <section id="orders" class="order-section">
+            <h2>Order Management</h2>
+            <p>Add and remove orders dynamically below.</p>
+            <form id="orderForm">
+                <label for="orderInput">Order Name or Details:</label>
+                <input type="text" id="orderInput" required>
+                <button type="submit">Add Order</button>
+            </form>
+            <h3>Current Orders</h3>
+            <ul id="ordersList"></ul>
+            <p id="orderCount"></p>
+        </section>
+
+        <section id="payment" class="payment-section">
+            <h2>Make a Payment</h2>
+            <form id="paymentForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" required><br><br>
+                <label for="expiryDate">Expiration Date:</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" required><br><br>
+                <label for="cvv">CVV:</label>
+                <input type="password" id="cvv" required><br><br>
+                <button type="submit">Pay Now</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const orderForm = document.getElementById('orderForm');
+        const orderInput = document.getElementById('orderInput');
+        const ordersList
