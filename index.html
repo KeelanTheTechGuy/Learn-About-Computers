@@ -122,3 +122,41 @@ Learn About Computers
     </main>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Order Tracker</title>
+</head>
+<body>
+  <h2>Order Tracker</h2>
+  <input id="orderInput" type="text" placeholder="Type order here">
+  <button onclick="addOrder()">Add Order</button>
+  <ul id="orderList">
+    <!-- Orders will appear here -->
+  </ul>
+
+  <script>
+    function addOrder() {
+      var input = document.getElementById('orderInput');
+      var order = input.value.trim();
+      if (order === "") {
+        alert("Please type something!");
+        return;
+      }
+
+      var li = document.createElement('li');
+      li.textContent = order + " ";
+      // Make a remove button
+      var removeBtn = document.createElement('button');
+      removeBtn.textContent = "Remove";
+      removeBtn.onclick = function() {
+        li.remove();
+      };
+      li.appendChild(removeBtn);
+
+      document.getElementById('orderList').appendChild(li);
+      input.value = ""; // Clear the input
+    }
+  </script>
+</body>
+</html>
