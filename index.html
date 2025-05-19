@@ -4,158 +4,121 @@ Learn About Computers
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computers for Beginners</title>
+    <title>Just A Website About Computers</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
         }
-        h1 {
-            color: #333;
+        header {
+            background: #333;
+            color: #fff;
+            padding: 30px 0 15px 0;
+            text-align: center;
         }
-        p {
+        nav {
+            background: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
             font-size: 18px;
-            line-height: 1.6;
         }
-    </style>
-</head>
-<body>
-
-    <h1>Computers for Beginners</h1>
-    
-    <p>Welcome to your first step in learning about computers! A computer is an electronic device that processes information, performs calculations, and stores data.</p>
-
-    <h2>Basic Components of a Computer</h2>
-    
-    <p><strong>1. Hardware:</strong> The physical parts of a computer, including the keyboard, mouse, monitor, and internal components like the processor and memory.</p>
-    <p><strong>2. Software:</strong> Programs and applications that run on a computer, like a web browser or word processor.</p>
-    
-    <h2>How Computers Work</h2>
-    
-    <p>Computers take input, process it, store data, and produce output. They follow instructions given by software to complete tasks.</p>
-
-    <h2>Why Learn About Computers?</h2>
-    
-    <p>Computers are essential in everyday life—helping with communication, work, entertainment, and learning new skills.</p>
-    
-    <p>Enjoy your journey into the world of computing!</p>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Types of Computers</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
+        nav a:hover {
+            text-decoration: underline;
         }
-        h1 {
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 36px 28px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        h1, h2 {
             color: #333;
         }
-        p {
+        p, ul {
             font-size: 18px;
             line-height: 1.6;
         }
         ul {
-            font-size: 18px;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>Different Types of Computers</h1>
-    
-    <p>Computers come in various shapes and sizes, each designed for specific tasks. Here are some common types:</p>
-
-    <h2>1. Desktop Computers</h2>
-    <p>These are powerful machines used in homes and offices. They consist of a monitor, keyboard, mouse, and a central processing unit (CPU).</p>
-
-    <h2>2. Laptops</h2>
-    <p>Portable computers that combine all components into a single device. Ideal for working on the go.</p>
-
-    <h2>3. Tablets</h2>
-    <p>Touchscreen devices that are smaller than laptops and used mainly for browsing, reading, and entertainment.</p>
-
-    <h2>4. Smartphones</h2>
-    <p>These are small but powerful computers that fit in your pocket! They can run apps, browse the internet, and take photos.</p>
-
-    <h2>5. Supercomputers</h2>
-    <p>High-performance machines used for scientific research, weather forecasting, and complex calculations.</p>
-
-    <p>Each type of computer serves different purposes, making life easier in various ways!</p>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to Programming</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        ul {
-            font-size: 18px;
+            margin-left: 25px;
         }
         code {
-            background-color: #eee;
-            padding: 5px;
+            background: #eee;
+            padding: 3px 7px;
+            border-radius: 3px;
             font-family: monospace;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 20px 6px;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Just A Website About Computers</h1>
+        <p>Beginner-friendly info about computers, their types, and a taste of programming!</p>
+    </header>
+    <nav>
+        <a href="#whatis">What is a Computer?</a>
+        <a href="#types">Types of Computers</a>
+        <a href="#programming">Intro to Programming</a>
+    </nav>
+    <main>
+        <section id="whatis">
+            <h2>What is a Computer?</h2>
+            <p>
+                A computer is an electronic device that processes information, performs calculations, and stores data. It follows instructions, called programs or software, to complete tasks quickly and accurately.
+            </p>
+            <h3>Basic Components of a Computer</h3>
+            <ul>
+                <li><strong>Hardware:</strong> The physical parts of a computer, like the keyboard, mouse, monitor, processor, and memory.</li>
+                <li><strong>Software:</strong> The programs and apps that run on a computer, such as web browsers and games.</li>
+            </ul>
+            <h3>How Computers Work</h3>
+            <p>
+                Computers take input (like typing or clicking), process it, store data, and show output (such as displaying information or playing sound).
+            </p>
+        </section>
 
-    <h1>Introduction to Programming</h1>
-    
-    <p>Computers follow instructions written in special languages called programming languages. Learning to code allows you to create websites, apps, games, and much more!</p>
+        <section id="types">
+            <h2>Types of Computers</h2>
+            <p>There are many kinds of computers for different uses. Here are some common types:</p>
+            <ul>
+                <li><strong>Desktop:</strong> Powerful machines used in homes and offices, usually with separate parts (monitor, keyboard, etc.).</li>
+                <li><strong>Laptop:</strong> Portable computers that combine all parts into one and run on batteries.</li>
+                <li><strong>Tablet:</strong> Touchscreen devices, easy to carry, used for browsing, reading, and entertainment.</li>
+                <li><strong>Smartphone:</strong> Small computers in your pocket! Used for calls, apps, internet, and more.</li>
+                <li><strong>Supercomputer:</strong> Huge, powerful computers used for research, weather, and science.</li>
+            </ul>
+        </section>
 
-    <h2>What is a Programming Language?</h2>
-    
-    <p>Programming languages help us communicate with computers. Some common languages include:</p>
-    
-    <ul>
-        <li><strong>Python</strong> - Simple and beginner-friendly</li>
-        <li><strong>JavaScript</strong> - Used for websites</li>
-        <li><strong>Java</strong> - Popular for software development</li>
-        <li><strong>C++</strong> - Used for games and high-performance programs</li>
-    </ul>
-
-    <h2>Basic Code Example</h2>
-    
-    <p>Here’s a simple program in Python:</p>
-    
-    <code>
-        print("Hello, world!")
-    </code>
-
-    <p>This code makes the computer display the words "Hello, world!"</p>
-
-    <h2>Why Learn to Code?</h2>
-    
-    <p>Coding allows you to build amazing things, solve problems, and even get great job opportunities!</p>
-    
-    <p>Give it a try—you might love it!</p>
-
+        <section id="programming">
+            <h2>Introduction to Programming</h2>
+            <p>
+                Computers follow instructions written in programming languages. Learning to code lets you create websites, apps, and solve problems!
+            </p>
+            <h3>Popular Programming Languages</h3>
+            <ul>
+                <li><strong>Python:</strong> Simple and great for beginners.</li>
+                <li><strong>JavaScript:</strong> Used to make websites interactive.</li>
+                <li><strong>Java:</strong> Popular for apps and software.</li>
+                <li><strong>C++:</strong> Used in games and high-speed programs.</li>
+            </ul>
+            <h3>Sample Code</h3>
+            <p>Here’s a basic Python program:</p>
+            <code>print("Hello, world!")</code>
+            <p>This code tells the computer to display: <strong>Hello, world!</strong></p>
+        </section>
+    </main>
 </body>
 </html>
