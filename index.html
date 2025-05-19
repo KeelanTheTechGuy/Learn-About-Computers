@@ -156,6 +156,71 @@ Learn About Computers
 
       document.getElementById('orderList').appendChild(li);
       input.value = ""; // Clear the input
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>Computer Orders</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        #ordersList { margin-top: 20px; }
+        .order-item { margin-bottom: 8px; }
+        .remove-btn { margin-left: 10px; color: red; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Computer Orders Page</h1>
+    <p>This page lets you add, remove, and track orders for computers.</p>
+
+    <h2>Add a New Order</h2>
+    <form id="orderForm">
+        <label for="orderInput">Order Name or Details:</label>
+        <input type="text" id="orderInput" required>
+        <button type="submit">Add Order</button>
+    </form>
+
+    <h2>Current Orders</h2>
+    <ul id="ordersList"></ul>
+    <p id="orderCount"></p>
+
+    <script>
+        const orderForm = document.getElementById('orderForm');
+        const orderInput = document.getElementById('orderInput');
+        const ordersList = document.getElementById('ordersList');
+        const orderCount = document.getElementById('orderCount');
+        let orders = [];
+
+        function updateOrdersDisplay() {
+            ordersList.innerHTML = '';
+            orders.forEach((order, index) => {
+                const li = document.createElement('li');
+                li.className = 'order-item';
+                li.innerHTML = order + 
+                    `<span class="remove-btn" onclick="removeOrder(${index})">[Remove]</span>`;
+                ordersList.appendChild(li);
+            });
+            orderCount.textContent = 'Total Orders: ' + orders.length;
+        }
+
+        orderForm.onsubmit = function(e) {
+            e.preventDefault();
+            const orderText = orderInput.value.trim();
+            if(orderText) {
+                orders.push(orderText);
+                orderInput.value = '';
+                updateOrdersDisplay();
+            }
+        };
+
+        window.removeOrder = function(index) {
+            orders.splice(index, 1);
+            updateOrdersDisplay();
+        };
+
+        // Initialize display
+        updateOrdersDisplay();
+    </script>
+</body>
+</html>
     }
   </script>
 </body>
